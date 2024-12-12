@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-
-void main() {
+  void main() {
   runApp(const Home());
 }
 
@@ -10,13 +9,14 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+     home : Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.menu), title: Text('Font Style'),
       ),
       body: Center(
         child: Container(
-          child: const Text('MNC University',
+          child: Text('MNC University',
             style: const TextStyle(
               backgroundColor: Color.fromRGBO(50, 168, 82, 1),
               color: Colors.red, fontSize: 30,
@@ -24,8 +24,10 @@ class Home extends StatelessWidget {
               fontStyle: FontStyle.italic, letterSpacing: 2,
               wordSpacing: 3, overflow: TextOverflow.fade,
               decoration: TextDecoration.underline, ), ),
-        ),
-      ),
+        )
+    )
+     )
     );
+
   }
 }
